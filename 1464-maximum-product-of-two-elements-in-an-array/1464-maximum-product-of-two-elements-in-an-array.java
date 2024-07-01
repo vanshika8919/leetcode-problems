@@ -4,16 +4,20 @@ class Solution {
         int l = 0;
         int r = 0;
         int maxres = 0;
+        int i=0;
         
-        for(int i=0; i<nums.length; i++)
+        while(i<nums.length)
         {
-            for(int j=i+1; j<nums.length; j++)
-            {
+            int j=i+1;
+            while(j<nums.length)
+            {      
                 l = nums[i]-1;
                 r = nums[j]-1;
                 res = l*r;
                 maxres = Math.max(maxres,res);
+                j++;
             }
+            i++;
         }
         return maxres;
     }
