@@ -9,9 +9,7 @@ class Solution {
             if(customers[i][0]<=tot_sum)
             {
                 tot_sum = tot_sum + customers[i][1];
-                System.out.println(tot_sum);
                 val = val + tot_sum - customers[i][0];
-                System.out.println(val);
             }
             else
             {
