@@ -6,11 +6,9 @@ class Solution {
             if (logs[i].equals("../")) {
                 if (count > 0) {
                     count--;
-                    System.out.println(count);
                 }
             } else if (!logs[i].equals("./")) {
                 count++;
-                System.out.println(count);
             }
         }
         return count;
