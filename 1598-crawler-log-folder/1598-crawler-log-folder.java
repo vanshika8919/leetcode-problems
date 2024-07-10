@@ -7,7 +7,11 @@ class Solution {
                 if (count > 0) {
                     count--;
                 }
-            } else if (!logs[i].equals("./")) {
+            } else if (logs[i].equals("./")) {
+                count=count;
+            }
+            else
+            {
                 count++;
             }
         }
