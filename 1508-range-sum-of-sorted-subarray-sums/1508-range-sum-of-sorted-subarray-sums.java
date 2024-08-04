@@ -1,5 +1,6 @@
 import java.util.*;
 class Solution {
+    private static final int MOD = 1_000_000_007;
     public int rangeSum(int[] nums, int n, int left, int right) {
         List<Integer> li = new ArrayList<>();
         
@@ -14,8 +15,8 @@ class Solution {
         Collections.sort(li);
         int sum1=0;
         for(int i=left-1;i<right;i++){
-            sum1 += li.get(i);
+            sum1 = (sum1 + li.get(i)) % MOD;
         }
-        return (int)(sum1 % 1_000_000_007);
+        return (int)sum1;
     }
 }
